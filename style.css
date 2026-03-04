@@ -1,0 +1,201 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #4bce5c;
+  color: #2af414;
+}
+
+/* Navigation links */
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section with background image */
+.hero {
+  background-image: url('images/header.jpg'); /* Replace with your actual image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+/* Overlay effect for readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: 1;
+}
+
+.hero h1, .hero nav {
+  position: relative;
+  z-index: 2; /* ensures text is above overlay */
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+}
+
+.hero nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero nav a:hover {
+  text-decoration: underline;
+}
+
+/* Section styling */
+section {
+  padding: 60px 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+section h2 {
+  text-align: center;
+  color: #004466;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+section p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Card container with responsive grid */
+.card-container {
+    
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+/* Individual card */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img, .card video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card h3 {
+  color: #004466;
+  margin: 15px 0 10px;
+  font-size: 1.3rem;
+}
+
+.card p {
+  padding: 0 15px 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Footer styling */
+footer {
+  background: #004466;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* Responsive design tweaks */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  nav a {
+    margin: 10px 0;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  section {
+    padding: 40px 15px;
+  }
+}
+/* Logo styling */
+.logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* Footer styling */
+footer {
+  background: #000000;
+  color: #ff1212;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+/* Project list styling */
+.project-list {
+  list-style-type: disc;   /* bullet style */
+  padding-left: 40px;      /* indent bullets */
+  margin-top: 20px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.project-list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for interactivity */
+.project-list li:hover {
+  color: #004466;
+  cursor: pointer;
+}
